@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}{{pet.name}}{% endblock %}
+{% block content %}
+<div class="flex-container">
+    <nav >
+        <!-- class="flex-container" -->
+        <form>
+            <button formaction="/edit/{{pet.id}}/editpet" formmethod="GET">Edit Pet Info</button>
+            
+    <button class="btn btn-primary btn-sm"
+        formaction="/{{ pet.id }}/deletepet"
+        formmethod="POST">Delete Pet From website</button></form>
+        <form></nav>
+
+    <ul>
+        <li>Name: {{pet.name}}</li>
+        {% if pet.photo_url %}
+   
+ 
+        <li><img class="img-fluid" src="{{ pet.photo_url }}"></li>
+        {% endif %}
+        <li>Name: {{pet.notes}}</li>
+        
+    </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

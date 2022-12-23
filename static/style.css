@@ -1,0 +1,12 @@
+nav{
+
+    display:flex;
+    flex-grow: 0;
+    background-color: cornsilk;
+}
+
+h1{
+    flex-grow: 3;
+}
+
+
